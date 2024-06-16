@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "${modId}",
+    "name": "${modName}",
+    "description": "A bleeding-edge 1.7.10 example mod with java 21 support",
+    "version": "${modVersion}",
+    "mcversion": "${minecraftVersion}",
+    "url": "https://github.com/FalsePattern/ExampleMod",
+    "updateUrl": "",
+    "authorList": [ "FalsePattern" ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
