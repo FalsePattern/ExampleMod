@@ -1,5 +1,5 @@
 plugins {
-    id("fpgradle-minecraft") version("0.1.15")
+    id("fpgradle-minecraft") version("0.2.0")
 }
 
 group = "com.example"
