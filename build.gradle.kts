@@ -1,6 +1,6 @@
 import com.falsepattern.fpgradle.dsl.* //Helper utilities for cleaner buildscript code
 plugins {
-    id("fpgradle-minecraft") version("0.3.3")
+    id("fpgradle-minecraft") version("0.3.5")
 }
 
 group = "com.example"
