@@ -1,6 +1,5 @@
-import com.falsepattern.fpgradle.dsl.* //Helper utilities for cleaner buildscript code
 plugins {
-    id("fpgradle-minecraft") version("0.3.6")
+    id("fpgradle-minecraft") version("0.4.0")
 }
 
 group = "com.example"
@@ -116,7 +115,19 @@ minecraft_fp {
 
 repositories {
     //Add repositories here
-    //You can use maven("reponame", uri("https://example.com/")) as a shortcut for maven repositories
+    //You can use maven("reponame", "https://example.com/") as a shortcut for maven repositories.
+
+    /*
+     * Built-in maven repository convenience shortcuts:
+     *
+     * cursemavenEX() -> adds cursemaven, and forces all curse.maven packages to route to only it
+     * modrinthEX() -> same thing but with modrinth maven
+     * mavenpattern() -> FalsePattern's maven
+     * jitpack() -> jitpack
+     * mega() -> The MEGA team's public maven
+     *
+     * The exclusive(...) method can be used as a simplified wrapper on top of exclusiveContent. See the FPGradle sources for details.
+     */
 }
 
 dependencies {
@@ -143,6 +154,10 @@ dependencies {
      *
      *  - apiSplit("g:n:v"): Same as above, but uses `api` instead of `implementation`
      *
+     *  - devOnlySplit("g:n:v"): Equivalent of implementationSplit, but with `runtimeOnlyNonPublishable` instead of `runtimeOnly`
+     *
+     *  - apiOnlySplit("g:n:v"): Equivalent of apiSplit, but with `runtimeOnlyNonPublishable` instead of `runtimeOnly`.
+     *
      *  - testCONFIG("g:n:v:c") - replace CONFIG by one of the above (except api and the split ones), same as above but for the test sources instead of main
      *
      *  - shadowImplementation("g:n:v:c"): effectively the same as API, but the dependency is included in your jar under a renamed package name
@@ -158,7 +173,9 @@ dependencies {
      * if you only want to compile against a mod, but not load it in dev.
      *
      * For CurseMaven dependencies, you can use `compileOnly(deobfCurse(modname-projectid:fileID))`. Note that you still
-     * need to have the cursemaven maven in your repositories! Also works with configurations other than compileOnly
+     * need to have the cursemaven maven in your repositories! Also works with configurations other than compileOnly.
+     *
+     * For Modrinth dependencies, you can use deobfModrinth.
      *
      * Gradle names for some of the configuration can be misleading, compileOnlyApi and runtimeOnly both get published as dependencies in Maven, but compileOnly does not.
      * The buildscript adds runtimeOnlyNonPublishable to also have a runtime dependency that's not published.
