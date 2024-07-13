@@ -1,5 +1,5 @@
 plugins {
-    id("fpgradle-minecraft") version("0.4.2")
+    id("fpgradle-minecraft") version("0.5.0")
 }
 
 group = "com.example"
@@ -110,6 +110,12 @@ minecraft_fp {
 //                incompatible("qux")
 //            }
 //        }
+//    }
+
+    //optional
+    //For configuring the fpgradle update checker
+//    updates {
+//        check = true // Convention
 //    }
 }
 
