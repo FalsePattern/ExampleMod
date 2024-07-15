@@ -1,5 +1,5 @@
 plugins {
-    id("fpgradle-minecraft") version("0.5.0")
+    id("fpgradle-minecraft") version("0.6.0")
 }
 
 group = "com.example"
@@ -66,6 +66,12 @@ minecraft_fp {
 //        version    = "MOD_VERSION" //Convention
 //        rootPkg    = "ROOT_PKG"    //Convention
     }
+
+    // optional
+    // Changes the log level of the console output
+//    logging {
+//        level = INFO //Convention
+//    }
 
     // optional
     // Use this if you want to publish on maven/curse/modrinth
