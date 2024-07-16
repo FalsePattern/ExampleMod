@@ -1,5 +1,5 @@
 plugins {
-    id("fpgradle-minecraft") version("0.6.0")
+    id("fpgradle-minecraft") version("0.6.1")
 }
 
 group = "com.example"
@@ -33,19 +33,22 @@ minecraft_fp {
 //    api {
 //        packages          = listOf() //Convention
 //        packagesNoRecurse = listOf() //Convention
+//        ignoreRootPkg     = false    //Convention
 //    }
 
     // optional
 //    mixin {
-//        pkg          = "mixins"      //optional
-//        pluginClass  = "MixinPlugin" //optional, requires pkg set
-//        debug        = false         //Convention
-//        hasMixinDeps = false         //Convention
+//        pkg           = "mixins"      //optional
+//        pluginClass   = "MixinPlugin" //optional, requires pkg set
+//        debug         = false         //Convention
+//        hasMixinDeps  = false         //Convention
+//        ignoreRootPkg = false         //Convention
 //    }
 
     // optional
 //    core {
 //        coreModClass                   = "Core"      //optional
+//        coreModIgnoreRootPkg           = false       //optional
 //        accessTransformerFile          = "le_at.cfg" //optional
 //        containsMixinsAndOrCoreModOnly = false       //Convention
 //    }
@@ -61,10 +64,11 @@ minecraft_fp {
     // Generates string constants you can use in code
     tokens {
         tokenClass = "Tags"
-//        modid      = "MOD_ID"      //Convention
-//        name       = "MOD_NAME"    //Convention
-//        version    = "MOD_VERSION" //Convention
-//        rootPkg    = "ROOT_PKG"    //Convention
+//        tokenClassIgnoreRootPkg = false         //Convention
+//        modid                   = "MOD_ID"      //Convention
+//        name                    = "MOD_NAME"    //Convention
+//        version                 = "MOD_VERSION" //Convention
+//        rootPkg                 = "ROOT_PKG"    //Convention
     }
 
     // optional
