@@ -1,5 +1,5 @@
 plugins {
-    id("fpgradle-minecraft") version("0.9.0")
+    id("fpgradle-minecraft") version("0.10.0")
 }
 
 group = "com.example"
@@ -40,6 +40,7 @@ minecraft_fp {
 //    mixin {
 //        pkg           = "mixins"      //optional
 //        pluginClass   = "MixinPlugin" //optional, requires pkg set
+//        extraConfigs  = listOf()      //Convention
 //        debug         = false         //Convention
 //        hasMixinDeps  = false         //Convention
 //        ignoreRootPkg = false         //Convention
