@@ -1,5 +1,5 @@
 plugins {
-    id("fpgradle-minecraft") version("0.12.2")
+    id("fpgradle-minecraft") version("0.14.1")
 //    kotlin("jvm") version "2.1.10"
 }
 
