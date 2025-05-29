@@ -1,5 +1,5 @@
 plugins {
-    id("com.falsepattern.fpgradle-mc") version("0.16.1")
+    id("com.falsepattern.fpgradle-mc") version "0.17.0"
 //    kotlin("jvm") version "2.1.21"  //If you want Kotlin. You need to also uncomment the scala line in gradle.properties, and enable Forgelin in the minecraft_fp block!
 //    scala  //If you want Scala, not compatible with jabel/modern java!
 }
@@ -33,9 +33,11 @@ minecraft_fp {
     // optional
     // For generating an -api jar
 //    api {
+//        classes           = listOf() //Convention
 //        packages          = listOf() //Convention
 //        packagesNoRecurse = listOf() //Convention
 //        ignoreRootPkg     = false    //Convention
+//        includeSources    = false     //Convention
 //    }
 
     // optional
@@ -190,7 +192,7 @@ dependencies {
      *
      *  - compile("g:n:v:c"): deprecated, replace with "api" (works like the old "compile") or "implementation" (can be more efficient)
      *
-     * You can exclude transitive dependencies (dependencies of the chosen dependency) by appending { transitive = false } if needed,
+     * You can exclude transitive dependencies (dependencies of the chosen dependency) by appending { excludeDeps() } if needed,
      * but use this sparingly as it can break using your mod as another mod's dependency if you're not careful.
      *
      * To depend on obfuscated jars you can use `devOnlyNonPublishable(rfg.deobf("dep:spec:1.2.3"))` to fetch an obfuscated jar from maven,
@@ -205,6 +207,6 @@ dependencies {
      * Gradle names for some of the configuration can be misleading, compileOnlyApi and runtimeOnly both get published as dependencies in Maven, but compileOnly does not.
      * The buildscript adds runtimeOnlyNonPublishable to also have a runtime dependency that's not published.
      *
-     * For more details, see https://docs.gradle.org/8.8/userguide/java_library_plugin.html#sec:java_library_configurations_graph
+     * For more details, see https://docs.gradle.org/8.14.1/userguide/java_library_plugin.html#sec:java_library_configurations_graph
      */
 }
