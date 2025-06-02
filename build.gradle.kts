@@ -1,5 +1,5 @@
 plugins {
-    id("com.falsepattern.fpgradle-mc") version "0.17.1"
+    id("com.falsepattern.fpgradle-mc") version "0.17.2"
 //    kotlin("jvm") version "2.1.21"  //If you want Kotlin. You need to also uncomment the scala line in gradle.properties, and enable Forgelin in the minecraft_fp block!
 //    scala  //If you want Scala, not compatible with jabel/modern java!
 }
