@@ -1,6 +1,6 @@
 plugins {
-    id("com.falsepattern.fpgradle-mc") version "0.17.2"
-//    kotlin("jvm") version "2.1.21"  //If you want Kotlin. You need to also uncomment the scala line in gradle.properties, and enable Forgelin in the minecraft_fp block!
+    id("com.falsepattern.fpgradle-mc") version "0.19.1"
+//    kotlin("jvm") version "2.2.0"  //If you want Kotlin. You need to also uncomment the scala line in gradle.properties, and enable Forgelin in the minecraft_fp block!
 //    scala  //If you want Scala, not compatible with jabel/modern java!
 }
 
@@ -52,7 +52,7 @@ minecraft_fp {
 
     // optional
 //    kotlin {
-//        forgelinVersion = "2.1.0-2.1.21"
+//        forgelinVersion = "2.1.1-2.2.0"
 //    }
 
 
@@ -91,6 +91,9 @@ minecraft_fp {
     // optional
     // Use this if you want to publish on maven/curse/modrinth
 //    publish {
+//        // optional
+//        // Enabled by default, makes your mod jars more reproducible between rebuilds if the source code didn't change
+//        reproducibleJars = true //Convention
 //        // optional
 //        // If not set, tries to read CHANGELOG.md (or the file specified in the CHANGELOG_FILE env var, if set)
 //        changelog = "https://github.com/myname/mymod/releases/tag/{version}"
@@ -139,6 +142,15 @@ minecraft_fp {
 //        check = true // Convention
 //    }
 }
+
+
+//val myJarInJar = jarInJar_fp("jarjar") {
+//    artifactName = "examplemod-jarinjar"
+//    javaCompiler = javaToolchains.compilerFor {
+//        languageVersion = JavaLanguageVersion.of(21)
+//        vendor = minecraft_fp.java.vendor
+//    }
+//}
 
 repositories {
     //Add repositories here
@@ -207,6 +219,6 @@ dependencies {
      * Gradle names for some of the configuration can be misleading, compileOnlyApi and runtimeOnly both get published as dependencies in Maven, but compileOnly does not.
      * The buildscript adds runtimeOnlyNonPublishable to also have a runtime dependency that's not published.
      *
-     * For more details, see https://docs.gradle.org/8.14.1/userguide/java_library_plugin.html#sec:java_library_configurations_graph
+     * For more details, see https://docs.gradle.org/8.14.2/userguide/java_library_plugin.html#sec:java_library_configurations_graph
      */
 }
