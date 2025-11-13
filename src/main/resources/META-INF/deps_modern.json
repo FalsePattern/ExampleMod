@@ -1,0 +1,11 @@
+{
+    "identifier": "falsepatternlib_dependencies",
+    "minJava": 21,
+    "dependencies": {
+        "always": {
+            "common": [
+                "com.example:udgd:1.0.0"
+            ]
+        }
+    }
+}

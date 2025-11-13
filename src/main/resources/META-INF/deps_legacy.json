@@ -1,0 +1,11 @@
+{
+    "identifier": "falsepatternlib_dependencies",
+    "maxJava": 20,
+    "dependencies": {
+        "always": {
+            "common": [
+                "com.example:dgd:1.0.0"
+            ]
+        }
+    }
+}

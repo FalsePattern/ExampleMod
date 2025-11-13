@@ -8,6 +8,7 @@ public interface Proxy {
         @Override
         public void preInit(FMLPreInitializationEvent event) {
             Share.LOG.info("I am " + Tags.MOD_NAME + " at version " + Tags.MOD_VERSION + " and root package " + Tags.ROOT_PKG);
+            Funny.funny();
         }
 
         @Override
