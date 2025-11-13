@@ -1,0 +1,33 @@
+{
+  "identifier": "falsepatternlib_dependencies",
+  "repositories": [
+    "https://mvn.falsepattern.com/releases",
+    "https://mvn.falsepattern.com/gtmega_releases"
+  ],
+  "modDependencies": {
+    "obf": {
+      "common": [
+        {
+          "modid": "falsepatternlib",
+          "artifact": "com.falsepattern:falsepatternlib-mc1.7.10:1.10.1"
+        },
+        {
+          "modid": "forgelin",
+          "artifact": "mega:forgelin-mc1.7.10:2.2.0-2.2.21"
+        }
+      ]
+    },
+    "dev": {
+      "common": [
+        {
+          "modid": "falsepatternlib",
+          "artifact": "com.falsepattern:falsepatternlib-mc1.7.10:1.10.1:dev"
+        },
+        {
+          "modid": "forgelin",
+          "artifact": "mega:forgelin-mc1.7.10:2.2.0-2.2.21:dev"
+        }
+      ]
+    }
+  }
+}
