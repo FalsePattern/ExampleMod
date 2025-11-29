@@ -1,6 +1,6 @@
 plugins {
-    id("com.falsepattern.fpgradle-mc") version "3.1.2"
-//    kotlin("jvm") version "2.2.0"  //If you want Kotlin. You need to also uncomment the scala line in gradle.properties, and enable Forgelin in the minecraft_fp block!
+    id("com.falsepattern.fpgradle-mc") version "3.3.0"
+//    kotlin("jvm") version "2.2.21"  //If you want Kotlin. You need to also uncomment the scala line in gradle.properties, and enable Forgelin in the minecraft_fp block!
 //    scala  //If you want Scala, not compatible with jabel/modern java!
 }
 
@@ -10,8 +10,14 @@ minecraft_fp {
     // optional
     // If you want to use modern java
 //    java {
-//        compatibility = legacy //Convention
-//        version       = JavaVersion.VERSION_XYZ //Convention, determined by compatibility
+//        //Valid values: legacy, jvmDowngrader, modern
+//        compatibility = modern                               //Convention: legacy
+//        version       = JavaVersion.VERSION_XYZ              //Convention, determined by compatibility
+//        vendor = JvmVendorSpec.ADOPTIUM                      //Convention
+//        modernRuntimeVersion = JavaVersion.VERSION_XYZ       //Convention, determined by compatibility
+//        //Valid values: doNotShade, projectIsLgpl21PlusCompatible, iWillPublishTheUnshadedJarForLgpl21PlusCompliance
+//        jvmDowngraderShade = doNotShade                      //Convention
+//        jvmDowngraderShadePackage = minecraft_fp.mod.rootPkg //Convention
 //    }
 
     // REQUIRED
@@ -52,7 +58,7 @@ minecraft_fp {
 
     // optional
 //    kotlin {
-//        forgelinVersion = "2.1.1-2.2.0"
+//        forgelinVersion = "2.4.0-2.2.21"
 //        hasKotlinDeps = false  //Convention
 //    }
 
